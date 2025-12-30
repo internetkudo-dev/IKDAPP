@@ -1,0 +1,29 @@
+{
+    "home": {
+        "nextDestination": "Ku do të shkoni?",
+        "searchPlaceholder": "Kërko destinacionin"
+    },
+    "tabs": {
+        "local": "Lokale",
+        "regional": "Rajonale",
+        "global": "Globale"
+    },
+    "reviewRewards": {
+        "title": "Rishiko Shpërblimet"
+    },
+    "profile": {
+        "purchases": {
+            "title": "Blerjet e mia",
+            "noPurchases": "Asnjë blerje akoma"
+        },
+        "errors": {
+            "loadError": "Dështoi ngarkimi i blerjeve",
+            "retry": "Provo përsëri"
+        }
+    },
+    "activeEsimCard": {
+        "active": "Aktive",
+        "inactive": "Jo Aktive",
+        "daysLeft": "ditë të mbetura"
+    }
+}

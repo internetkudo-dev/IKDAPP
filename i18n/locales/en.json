@@ -1,0 +1,29 @@
+{
+    "home": {
+        "nextDestination": "Where to next?",
+        "searchPlaceholder": "Search destination"
+    },
+    "tabs": {
+        "local": "Local",
+        "regional": "Regional",
+        "global": "Global"
+    },
+    "reviewRewards": {
+        "title": "Review Rewards"
+    },
+    "profile": {
+        "purchases": {
+            "title": "My Purchases",
+            "noPurchases": "No purchases yet"
+        },
+        "errors": {
+            "loadError": "Failed to load purchases",
+            "retry": "Retry"
+        }
+    },
+    "activeEsimCard": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "daysLeft": "days left"
+    }
+}
