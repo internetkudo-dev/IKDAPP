@@ -5,8 +5,8 @@ import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { useVerifyUserMutation } from "../../store/authApi.slice";
 import { RootState } from "../../store/store";
-import Header from "../components/header";
-import Input from "../components/input";
+import Header from "@/components/header";
+import Input from "@/components/input";
 
 const EnterCodeForm = () => {
   const { t } = useTranslation();

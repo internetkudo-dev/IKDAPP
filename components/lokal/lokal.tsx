@@ -2,7 +2,7 @@ import { buildFlagUrl } from "@/utils/esim";
 import { router } from "expo-router";
 import React, { useMemo } from "react";
 import { ActivityIndicator, FlatList, Text, View } from "react-native";
-import { useGetDestinationsQuery } from "../../../store/esimApi.slice";
+import { useGetDestinationsQuery } from "@/store/esimApi.slice";
 import CountryCard from "./countrycard";
 
 type Props = { search?: string };

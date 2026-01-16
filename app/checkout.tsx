@@ -20,8 +20,8 @@ import {
   useConfirmPaymentMutation,
   useCreatePaymentIntentMutation,
 } from "@/store/paymentsApi.slice"; // ⬅️ adjust to your slice path
-import Header from "./components/header"; // ⬅️ if this path is wrong, try: "../../components/header"
-import SuccessModal from "./components/SuccessModal";
+import Header from "@/components/header"; // ⬅️ if this path is wrong, try: "../../components/header"
+import SuccessModal from "@/components/SuccessModal";
 
 export default function Checkout() {
   const { t } = useTranslation();

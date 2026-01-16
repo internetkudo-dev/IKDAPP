@@ -10,7 +10,7 @@ import { useFocusEffect } from "@react-navigation/native";
 import React, { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { FlatList, Pressable, Text, View } from "react-native";
-import Header from "../components/header";
+import Header from "@/components/header";
 
 const StatusBadge = ({ status }: { status: string }) => {
   const getStatusColor = () => {

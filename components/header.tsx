@@ -71,7 +71,7 @@ const Header = ({
       <View className="flex-row items-center justify-between">
         {/* LEFT: Logo */}
         <Image
-          source={require("../../assets/images/logo.png")}
+          source={require("../assets/images/logo.png")}
           style={{ width: 120, height: 40 }}
           resizeMode="contain"
         />

@@ -28,8 +28,8 @@ import {
   useValidatePromoCodeMutation,
 } from "@/store/odersApi.slice";
 import { getCountryFlagUrl } from "../utils/esimUtils";
-import Header from "./components/header";
-import SuccessModal from "./components/SuccessModal";
+import Header from "@/components/header";
+import SuccessModal from "@/components/SuccessModal";
 
 // Brand colors - blue-ish theme
 const BRAND_COLORS = {

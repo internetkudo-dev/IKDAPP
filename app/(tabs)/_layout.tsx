@@ -2,7 +2,7 @@ import { BlurView } from "expo-blur";
 import { Tabs } from "expo-router";
 import React from "react";
 import { Image, Pressable, Text, View } from "react-native";
-import AuthGuard from "../components/auth/authGuard";
+import AuthGuard from "@/components/auth/authGuard";
 
 const COLORS = {
   primary: "#0B449C",

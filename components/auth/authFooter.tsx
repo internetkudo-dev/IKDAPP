@@ -26,7 +26,7 @@ const AuthFooter = ({
       <View className="gap-3">
         <TouchableOpacity className="flex-row items-center justify-center border border-[#CBD5E1] rounded-md py-4">
           <Image
-            source={require("../../../assets/images/google.png")}
+            source={require("../../assets/images/google.png")}
             style={{ width: 24, height: 24 }}
             resizeMode="contain"
           />
@@ -35,7 +35,7 @@ const AuthFooter = ({
 
         <TouchableOpacity className="flex-row items-center justify-center border border-[#CBD5E1] rounded-md py-4">
           <Image
-            source={require("../../../assets/images/apple.png")}
+            source={require("../../assets/images/apple.png")}
             style={{ width: 24, height: 24 }}
             resizeMode="contain"
           />

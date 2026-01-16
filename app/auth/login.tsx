@@ -10,9 +10,9 @@ import { useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
 
 import { createLoginSchema } from "../../utils/schemas/loginSchema";
-import AuthFooter from "../components/auth/authFooter";
-import Header from "../components/header";
-import Input from "../components/input";
+import AuthFooter from "@/components/auth/authFooter";
+import Header from "@/components/header";
+import Input from "@/components/input";
 
 const LoginForm = () => {
   const { t } = useTranslation();

@@ -2,8 +2,8 @@ import { useFocusEffect } from "@react-navigation/native";
 import React from "react";
 import { ActivityIndicator, ScrollView, Text, View } from "react-native";
 import { useTranslation } from "react-i18next";
-import ActiveEsimCard from "../components/activeEsims/activeEsimCard";
-import Header from "../components/header";
+import ActiveEsimCard from "@/components/activeEsims/activeEsimCard";
+import Header from "@/components/header";
 
 import { useCurrentUser } from "@/hooks/useCurrentUser";
 import { useEsimData } from "@/hooks/useEsimData";

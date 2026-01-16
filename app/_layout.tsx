@@ -24,7 +24,7 @@ export default function RootLayout() {
             <Stack.Screen name="(tabs)" />
             {/* <Stack.Screen name="country/[id]" /> */}
             {/* <Stack.Screen name="auth" /> */}
-            <Stack.Screen name="/esimOffers.tsx" />
+            <Stack.Screen name="esimOffers" />
           </Stack>
         </StripeProvider>
       </I18nextProvider>

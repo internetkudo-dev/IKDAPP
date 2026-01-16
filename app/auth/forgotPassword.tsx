@@ -9,8 +9,8 @@ import { useTranslation } from "react-i18next";
 import * as z from "zod";
 import { setUserId } from "../../store/auth.slice";
 import { useSendResetCodeMutation } from "../../store/authApi.slice";
-import Header from "../components/header";
-import Input from "../components/input";
+import Header from "@/components/header";
+import Input from "@/components/input";
 
 const ForgotPasswordForm = () => {
   const { t } = useTranslation();

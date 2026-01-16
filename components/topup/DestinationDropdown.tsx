@@ -12,7 +12,7 @@ import {
   View,
 } from "react-native";
 import { useTranslation } from "react-i18next";
-import { useGetDestinationsQuery } from "../../../store/esimApi.slice";
+import { useGetDestinationsQuery } from "@/store/esimApi.slice";
 
 export type DestinationType = "local" | "regional";
 

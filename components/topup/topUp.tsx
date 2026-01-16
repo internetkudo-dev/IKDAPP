@@ -8,8 +8,8 @@ import { useTranslation } from "react-i18next";
 import {
   useGetCountryOffersQuery,
   useGetZoneOffersQuery,
-} from "../../../store/esimApi.slice";
-import { useCreateOrderMutation } from "../../../store/odersApi.slice";
+} from "@/store/esimApi.slice";
+import { useCreateOrderMutation } from "@/store/odersApi.slice";
 import DestinationDropdown, { DestinationItem } from "./DestinationDropdown";
 import TopUpOfferCard from "./TopUpOfferCard";
 

@@ -5,25 +5,35 @@ export const esimApiSlice = createApi({
     reducerPath: 'esimApi',
     baseQuery: fetchBaseQuery({ baseUrl: '/api' }),
     endpoints: (builder) => ({
-        getEsims: builder.query({
-            query: () => 'esims',
+        getEsims: builder.query<any, void>({
+            query: () => "esims",
         }),
-        getPackageDetails: builder.query({
+        getPackageDetails: builder.query<any, string | number>({
             query: (id) => `packages/${id}`,
         }),
-        getRegions: builder.query({
-            query: () => 'regions',
+        getRegions: builder.query<any, void>({
+            query: () => "regions",
         }),
-        getDestinations: builder.query({
-            query: () => 'destinations',
+        getDestinations: builder.query<any, void>({
+            query: () => "destinations",
         }),
-        getZoneOffers: builder.query({
+        getZoneOffers: builder.query<any, number | string>({
             query: (zoneId) => `zones/${zoneId}/offers`,
+        }),
+        getCountryOffers: builder.query<any, string>({
+            query: (countryCode) => `countries/${countryCode}/offers`,
         }),
     }),
 });
 
-export const { useGetEsimsQuery, useGetPackageDetailsQuery, useGetRegionsQuery, useGetDestinationsQuery, useGetZoneOffersQuery } = esimApiSlice;
+export const {
+    useGetEsimsQuery,
+    useGetPackageDetailsQuery,
+    useGetRegionsQuery,
+    useGetDestinationsQuery,
+    useGetZoneOffersQuery,
+    useGetCountryOffersQuery
+} = esimApiSlice;
 
 export type CountryOperator = {
     name: string;

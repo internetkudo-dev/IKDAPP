@@ -17,13 +17,13 @@ import * as Device from "expo-device";
 import {
   useGetPackageDetailsQuery,
   CountryOperator,
-} from "../../../store/esimApi.slice";
+} from "@/store/esimApi.slice";
 import {
   regionPrettyName,
   regionFlagCode,
   buildFlagUrl,
-} from "../../../utils/esim";
-import { getCountryFlagUrl } from "../../../utils/esimUtils";
+} from "@/utils/esim";
+import { getCountryFlagUrl } from "@/utils/esimUtils";
 
 const { width, height } = Dimensions.get("window");
 
@@ -86,8 +86,8 @@ export default function EsimDetailsModal({
   // Convert API data to component format - use exact same logic as regions component
   const currentEsimDetails = React.useMemo(():
     | (EsimDetails & {
-        countryOperators: CountryOperator[];
-      })
+      countryOperators: CountryOperator[];
+    })
     | null => {
     if (!packageDetails) return null;
 
@@ -98,7 +98,7 @@ export default function EsimDetailsModal({
     const title = isRegional
       ? regionPrettyName(packageDetails.packageName)
       : firstCountry?.countryName ||
-        regionPrettyName(packageDetails.packageName);
+      regionPrettyName(packageDetails.packageName);
 
     const flagUrl = isRegional
       ? buildFlagUrl(regionFlagCode(packageDetails.packageName))
@@ -126,15 +126,13 @@ export default function EsimDetailsModal({
       isRegional,
       availableCountries: isRegional ? countryNames : undefined,
       networks: operatorNames,
-      description: `${t("modal.package.description")} ${
-        packageDetails.usageAllowed || "eSIM"
-      } ${
-        isRegional
+      description: `${t("modal.package.description")} ${packageDetails.usageAllowed || "eSIM"
+        } ${isRegional
           ? packageDetails.numberOfCountries +
-            " " +
-            t("modal.package.countries")
+          " " +
+          t("modal.package.countries")
           : title
-      }.`,
+        }.`,
       features: [
         t("modal.package.features.speed"),
         t("modal.package.features.activation"),
@@ -142,10 +140,9 @@ export default function EsimDetailsModal({
         t("modal.package.features.noContract"),
         ...(isRegional
           ? [
-              `${t("modal.package.features.roaming")} ${
-                packageDetails.numberOfCountries
-              } ${t("modal.package.countries")}`,
-            ]
+            `${t("modal.package.features.roaming")} ${packageDetails.numberOfCountries
+            } ${t("modal.package.countries")}`,
+          ]
           : []),
       ],
       coverage: isRegional
@@ -482,23 +479,21 @@ export default function EsimDetailsModal({
 
                 {/* Phone Compatibility Check */}
                 <View
-                  className={`rounded-2xl p-4 mb-6 border ${
-                    isCompatible === true
+                  className={`rounded-2xl p-4 mb-6 border ${isCompatible === true
                       ? "bg-[#f0f9ff] border-[#10B981]/30"
                       : isCompatible === false
-                      ? "bg-[#fef2f2] border-[#ef4444]/30"
-                      : "bg-[#f8f9fa] border-[#6b7280]/30"
-                  }`}
+                        ? "bg-[#fef2f2] border-[#ef4444]/30"
+                        : "bg-[#f8f9fa] border-[#6b7280]/30"
+                    }`}
                 >
                   <View className="flex-row items-center">
                     <View
-                      className={`w-8 h-8 rounded-full items-center justify-center mr-3 ${
-                        isCompatible === true
+                      className={`w-8 h-8 rounded-full items-center justify-center mr-3 ${isCompatible === true
                           ? "bg-[#10B981]"
                           : isCompatible === false
-                          ? "bg-[#ef4444]"
-                          : "bg-[#6b7280]"
-                      }`}
+                            ? "bg-[#ef4444]"
+                            : "bg-[#6b7280]"
+                        }`}
                     >
                       {isCheckingCompatibility ? (
                         <Ionicons name="hourglass" size={16} color="white" />

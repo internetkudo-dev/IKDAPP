@@ -2,8 +2,8 @@ import { useCurrentUser } from "@/hooks/useCurrentUser";
 import React from "react";
 import { ScrollView, Text, View } from "react-native";
 import { useTranslation } from "react-i18next";
-import Accordion, { FAQItem } from "../components/accordion";
-import Header from "../components/header";
+import Accordion, { FAQItem } from "@/components/accordion";
+import Header from "@/components/header";
 
 export default function HelpScreen() {
   const { name: userName } = useCurrentUser();

@@ -7,10 +7,10 @@ import { ActivityIndicator, Image, ScrollView, Text, View } from "react-native";
 import {
   useGetCountryOffersQuery,
   useGetZoneOffersQuery,
-} from "../store/esimApi.slice";
-import { useCreateOrderMutation } from "../store/odersApi.slice";
-import Header from "./components/header";
-import OfferCard from "./components/offers/offerCard";
+} from "@/store/esimApi.slice";
+import { useCreateOrderMutation } from "@/store/odersApi.slice";
+import Header from "@/components/header";
+import OfferCard from "@/components/offers/offerCard";
 
 export const screenOptions = { headerShown: false };
 
@@ -122,8 +122,8 @@ export default function EsimOffers() {
               typeof offer.countriesCount === "number"
                 ? offer.countriesCount
                 : Array.isArray(offer.countries)
-                ? offer.countries.length
-                : undefined;
+                  ? offer.countries.length
+                  : undefined;
 
             // Use packageTemplateId if available (for regions), otherwise use id (for countries)
             const packageId = offer.packageTemplateId || offer.id;

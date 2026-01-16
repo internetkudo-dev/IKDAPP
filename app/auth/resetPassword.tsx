@@ -9,8 +9,8 @@ import * as z from "zod";
 import { selectUserId } from "../../store/auth.slice";
 import { useResetPasswordMutation } from "../../store/authApi.slice";
 import { createResetPasswordSchema } from "../../utils/schemas/resetPasswordSchema";
-import Header from "../components/header";
-import Input from "../components/input";
+import Header from "@/components/header";
+import Input from "@/components/input";
 
 const ResetPasswordForm = () => {
   const { t } = useTranslation();

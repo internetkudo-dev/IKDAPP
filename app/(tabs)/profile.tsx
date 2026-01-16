@@ -20,7 +20,7 @@ import {
   View,
 } from "react-native";
 import { useDispatch } from "react-redux";
-import Header from "../components/header";
+import Header from "@/components/header";
 
 const Row = ({ label, onPress }: { label: string; onPress?: () => void }) => (
   <Pressable
@@ -57,8 +57,8 @@ const Status = ({
     status === "ACTIVE"
       ? "#22C55E"
       : status === "BLOCKED"
-      ? "#EF4444"
-      : "#F59E0B";
+        ? "#EF4444"
+        : "#F59E0B";
   const verifiedText = isVerified ? "Verified" : "Not Verified";
   const text = `${status ?? "—"} · ${verifiedText}`;
   return (
@@ -85,9 +85,8 @@ const StatCard = ({
   isBlue?: boolean;
 }) => (
   <View
-    className={`${
-      isBlue ? "bg-blue-50" : "bg-white"
-    } rounded-2xl p-5 flex-1 mx-1 border border-blue-200`}
+    className={`${isBlue ? "bg-blue-50" : "bg-white"
+      } rounded-2xl p-5 flex-1 mx-1 border border-blue-200`}
     style={{
       shadowOpacity: 0.08,
       shadowRadius: 8,
@@ -107,24 +106,21 @@ const StatCard = ({
         />
       </View>
       <Text
-        className={`text-2xl font-bold ${
-          isBlue ? "text-blue-900" : "text-gray-900"
-        } mb-1`}
+        className={`text-2xl font-bold ${isBlue ? "text-blue-900" : "text-gray-900"
+          } mb-1`}
       >
         {value}
       </Text>
       <Text
-        className={`text-sm ${
-          isBlue ? "text-blue-700" : "text-gray-600"
-        } text-center`}
+        className={`text-sm ${isBlue ? "text-blue-700" : "text-gray-600"
+          } text-center`}
       >
         {title}
       </Text>
       {subtitle && (
         <Text
-          className={`text-xs ${
-            isBlue ? "text-blue-600" : "text-gray-500"
-          } text-center mt-1`}
+          className={`text-xs ${isBlue ? "text-blue-600" : "text-gray-500"
+            } text-center mt-1`}
         >
           {subtitle}
         </Text>
@@ -172,9 +168,8 @@ const SquareCard = ({
 
 const SkeletonCard = ({ isSquare = false }: { isSquare?: boolean }) => (
   <View
-    className={`bg-white rounded-2xl border border-blue-200 ${
-      isSquare ? "p-4 flex-1 mx-1 aspect-square" : "p-5 flex-1 mx-1"
-    }`}
+    className={`bg-white rounded-2xl border border-blue-200 ${isSquare ? "p-4 flex-1 mx-1 aspect-square" : "p-5 flex-1 mx-1"
+      }`}
     style={{
       shadowOpacity: 0.08,
       shadowRadius: 8,

@@ -1,6 +1,6 @@
 // components/activeEsims/activeEsimCard.tsx
-import QRCodeModal from "@/app/components/QRCodeModal";
-import TopUpHistoryModal from "@/app/components/TopUpHistoryModal";
+import QRCodeModal from "@/components/QRCodeModal";
+import TopUpHistoryModal from "@/components/TopUpHistoryModal";
 import { OrderResponse } from "@/store/odersApi.slice";
 import { activateEsim } from "@/utils/esimActivationUtils";
 import { Ionicons } from "@expo/vector-icons";
@@ -223,7 +223,7 @@ export default function ActiveEsimCard(props: Props) {
               individualUsage.totalUsed === 0
                 ? 0
                 : (individualUsage.totalUsed / individualUsage.totalAllowed) *
-                  ARC_LEN
+                ARC_LEN
             }
             strokeLinecap="round"
           />
@@ -340,7 +340,7 @@ export default function ActiveEsimCard(props: Props) {
             styles.btn,
             styles.btnThird,
             (individualUsage.usagePercentage >= 80 || isToppingUp) &&
-              styles.btnDisabled,
+            styles.btnDisabled,
           ]}
           onPress={() => {
             if (isToppingUp) return; // Prevent double-tap
@@ -371,7 +371,7 @@ export default function ActiveEsimCard(props: Props) {
             style={[
               styles.btnText,
               (individualUsage.usagePercentage >= 80 || isToppingUp) &&
-                styles.btnTextDisabled,
+              styles.btnTextDisabled,
             ]}
           >
             {t("activeEsimCard.topUp")}

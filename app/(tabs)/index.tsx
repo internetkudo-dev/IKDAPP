@@ -5,10 +5,10 @@ import { SceneMap, TabBar, TabView } from "react-native-tab-view";
 import { useTranslation } from "react-i18next";
 
 import { useCurrentUser } from "@/hooks/useCurrentUser";
-import Global from "../components/global/gobal";
-import Header from "../components/header";
-import Lokal from "../components/lokal/lokal";
-import Region from "../components/regjionale/region";
+import Global from "@/components/global/gobal";
+import Header from "@/components/header";
+import Lokal from "@/components/lokal/lokal";
+import Region from "@/components/regjionale/region";
 
 const LokaleTab = ({ search }: { search: string }) => <Lokal search={search} />;
 const RegjionaleTab = () => <Region />;

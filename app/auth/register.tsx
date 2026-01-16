@@ -12,9 +12,9 @@ import { setCredentials } from "@/store/auth.slice";
 import { useSignUpMutation } from "@/store/authApi.slice";
 import { getRegisterFields } from "../../utils/auth/authTypes";
 import { createRegisterSchema } from "../../utils/schemas/registerSchema";
-import AuthFooter from "../components/auth/authFooter";
-import Header from "../components/header";
-import Input from "../components/input";
+import AuthFooter from "@/components/auth/authFooter";
+import Header from "@/components/header";
+import Input from "@/components/input";
 
 const RegisterForm = () => {
   const { t } = useTranslation();
